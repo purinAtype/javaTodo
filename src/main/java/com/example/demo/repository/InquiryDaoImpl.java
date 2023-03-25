@@ -32,7 +32,6 @@ public class InquiryDaoImpl implements InquiryDao {
 
 	@Override
 	public List<Inquiry> getAll() {
-		
 		String sql = "SELECT id, name, email, contents, created FROM inquiry";
 		List<Map<String, Object>> resultList = jdbcTemplate.queryForList(sql);
 		List<Inquiry> list = new ArrayList<Inquiry>();
@@ -45,8 +44,6 @@ public class InquiryDaoImpl implements InquiryDao {
 			inquiry.setCreated(((Timestamp) result.get("created")).toLocalDateTime());
 			list.add(inquiry);
 		}
-		
 		return list;
 	}
-	
 }

@@ -51,7 +51,6 @@ public class InquiryController {
 		return "inquiry/form_boot";
 	}
 
-
 	@PostMapping("/confirm")
 	public String confirm(@Validated InquiryForm inquiryForm,
 	        BindingResult result,
